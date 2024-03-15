@@ -1,0 +1,36 @@
+package com.progetto.presentation;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.progetto.services.ProdottoService;
+
+@Controller
+public class ProdottoController2 {
+
+	
+	private ProdottoService service;
+	
+	@GetMapping("index")
+	public String getProdotto(Model m) {
+		
+		m.addAttribute("elencoProdotti", service.getProdotti());
+		return "index";
+		
+	}
+	@GetMapping("nuovoProdotto")
+	public String getProdotto()) {
+		
+		m.addAttribute("elencoProdotti", service.getProdotti());
+		return "nuovoProdotto";
+		
+	}
+	@GetMapping("dettagli")
+	public String getProdotto()) {
+		
+		
+		return "dettagli";
+		
+	}
+}

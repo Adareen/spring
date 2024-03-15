@@ -1,0 +1,10 @@
+package com.example.progetto.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.progetto.entities.SerieTV;
+
+												// classe, chiave
+public interface SerieTVDAO extends JpaRepository<SerieTV, Integer> {
+
+}

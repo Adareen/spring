@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title th:text="${titolo}">Insert title here</title>
+</head>
+<body>
+
+	<h1 th:text="${titolo}>Pippo</h1>
+	
+	<form action='serie' >
+	
+	
+		<input type='text' name='title' >
+		<input type='text' name='genere' >
+		<input type='text' name='locandina' >
+		<input type='text' name='rating' >
+		<input type='submit' value='Add Serie' >
+	</form>
+
+
+	<table>
+		<tr>
+
+			<th>title</th>
+			<th>rating</th>
+
+
+		</tr>
+
+		<tr th:each='serie: ${elencoSerie}'>
+			<td th:text>
+				
+			
+			</td>
+		</tr>
+
+
+	</table>
+
+</body>
+</html>

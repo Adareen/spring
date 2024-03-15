@@ -1,0 +1,31 @@
+
+// magazzino prodotti 
+/*
+ * db con prodotti nome, descizione prezzo 
+ * altra tabella con movimenti id_prodotto entrate uscite data fk collegata a prodotti
+ * 
+ *  @entity 
+ *  prodotto
+ *  movimento 
+ *  
+ *  @repository 
+ *  dao interface implements jparepo per prodotti e per movimentoDAO
+ *  
+ *  @service
+ *  interface prodttoservice e prodottoserviceIMPL stessa cosa movimento
+ *  (alternativa, unico service magazzinoService che implementa i metodi sia prodotto sia movimento)
+ *  
+ *  
+ *  @controller
+ *  controllerMVC viste in html 
+ *  
+ *  
+ *  @controller
+ *  @restController
+ *  controllerREST se voglio macinare i dati -> json
+ *  
+ *  
+ *  pagina form per ogni singolo oggetto in magazzino on click del button parte una fetch post post mapping 
+ 	pagina tabella, pagina add nuovo prodotto (in db con fetch post -> postmapping -> dao lancia in db )
+ * 
+ * */

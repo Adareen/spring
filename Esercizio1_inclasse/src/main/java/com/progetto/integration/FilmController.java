@@ -1,0 +1,37 @@
+package com.progetto.integration;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+import com.progetto.entities.Films;
+import com.progetto.services.FilmService;
+
+@RestController
+@RequestMapping("api")
+public class FilmController {
+	
+	@Autowired
+	private FilmService service;
+	
+	@GetMapping("film")
+	public List<Films> getAll(){
+		return service.getFilms();
+	}
+	
+	// sparo i film in database
+	@PostMapping("film")
+	public Films add(@RequestBody Films f){
+		return service.addFilm(f);
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,9 @@
+INDEX VERSION 1.134+/Users/andrearizzo/Desktop/spring/.metadata/.plugins/org.eclipse.jdt.core
+1865797976.index
+325201667.index
+3305973883.index
+857252476.index
+49039450.index
+3026359415.index
+1632713325.index
+419789815.index

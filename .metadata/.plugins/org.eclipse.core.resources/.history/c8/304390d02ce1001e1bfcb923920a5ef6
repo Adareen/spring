@@ -1,0 +1,9 @@
+package com.progetto.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.progetto.entities.Prodotto;
+
+public interface ProdottoDAO extends JpaRepository<Prodotto, Integer> {
+
+}

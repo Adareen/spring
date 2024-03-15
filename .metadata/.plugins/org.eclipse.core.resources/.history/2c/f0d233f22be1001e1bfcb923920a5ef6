@@ -1,0 +1,37 @@
+package com.progetto.entities;
+
+public class Movimento {
+
+	private int idProdotto; 
+	private int entrate;
+	private int uscite;
+	private String data;
+	public int getIdProdotto() {
+		return idProdotto;
+	}
+	public void setIdProdotto(int idProdotto) {
+		this.idProdotto = idProdotto;
+	}
+	public int getEntrate() {
+		return entrate;
+	}
+	public void setEntrate(int entrate) {
+		this.entrate = entrate;
+	}
+	public int getUscite() {
+		return uscite;
+	}
+	public void setUscite(int uscite) {
+		this.uscite = uscite;
+	}
+	public String getData() {
+		return data;
+	}
+	public void setData(String data) {
+		this.data = data;
+	}
+	
+	
+	
+	
+}

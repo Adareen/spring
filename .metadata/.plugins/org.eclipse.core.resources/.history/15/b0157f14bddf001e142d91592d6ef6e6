@@ -1,0 +1,5 @@
+package com.progetto.services;
+
+public interface FilmService {
+
+}

@@ -1,0 +1,7 @@
+package com.example.progetto.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SerieTVDAO extends JpaRepository<T, ID> {
+
+}

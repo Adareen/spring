@@ -1,0 +1,9 @@
+package com.progetto.repos;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.progetto.entities.Films;
+
+public interface FilmDAO extends JpaRepository<Films, Integer> {
+
+}

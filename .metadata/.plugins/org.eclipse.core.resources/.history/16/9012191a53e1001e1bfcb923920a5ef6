@@ -1,0 +1,62 @@
+
+body{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20230423/pngtree-an-empty-warehouse-with-many-shelves-image_2486816.jpg);
+    background-size: cover;
+}
+
+
+.box{
+    background-color:rgba(122, 120, 117, 0.8);
+    color: #ffff;
+    
+    width: auto;
+    border-radius: 25px;
+    margin-top: 1rem;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+/* .box{
+    background-color: rgba(122, 120, 117, 0.8);
+    color: #ffffff;
+    /* font-size: 75%; */
+    /* padding: 2rem;
+    margin-bottom: 2rem; */
+    /* padding-bottom: 3rem; 
+}*/
+/* 
+.dettBox{
+    background-color: rgba(122, 120, 117, 0.8);
+    color: #ffffff;
+    font-size: 75%;
+    padding: 6rem;
+    border-radius: 25px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+} */
+
+#btnReg{
+    margin-top: 2rem;
+    flex: center;
+}
+
+ .btn{
+    width: fit-content;
+    float: right;
+    margin-right: 1rem
+   
+} 
+
+td, th {
+    vertical-align:middle;
+    text-align:center;
+    border-radius:10px;
+    
+    padding: 3px;
+
+    
+  }
+
+
+

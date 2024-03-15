@@ -1,0 +1,41 @@
+package com.example.progetto.prensetation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.progetto.entities.SerieTV;
+import com.example.progetto.services.SerieService;
+
+@Controller // stiamo usando un controller e la risposta che ti do è il nome della pagina html che sta dentro template
+public class SerieCTRL2 {
+	
+	// mvc method
+
+	@Autowired
+	private SerieService service;
+	
+	
+	// get mapping per ogni singola pagina web, tante per quante sono le pagine che voglio implementare
+	
+	
+	
+	@GetMapping("/serie")
+	// @ResponseBody // se metto questa, la risposta che ritorna la sputa in pagina html /serie e printa il return.
+	public String getSerie(Model m) {
+		m.addAttribute("titolo", "Serie TV");
+		m.addAttribute("elencoSerie", service.getSerie());
+		return "serie"; // nome della pagina che deve stare dentro html
+	}
+	
+	
+	@PostMapping("serie")
+	public String addSerie(SerieTV s) {
+		service.addSerie(s);
+		return "redirect:serie";
+	}
+	
+}

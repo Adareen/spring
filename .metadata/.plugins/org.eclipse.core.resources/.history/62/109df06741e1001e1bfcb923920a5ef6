@@ -1,0 +1,39 @@
+package com.progetto.presentation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.progetto.services.ProdottoService;
+
+@Controller
+
+public class ProdottoController2 {
+
+	@Autowired
+	private ProdottoService service;
+	
+	@GetMapping("index")
+	public String getProdotto(Model m) {
+		
+		m.addAttribute("elencoProdotti", service.getProdotti());
+		return "index";
+		
+	}
+	@GetMapping("index/nuovoProdotto")
+	public String getProdotto1(Model m) {
+		
+		m.addAttribute("elencoProdotti", service.getProdotti());
+		return "nuovoProdotto";
+		
+	}
+	
+	@GetMapping("dettagli")
+	public String getProdotto4(Model m) {
+		
+		m.addAttribute("elencoProdotti", service.getProdotti());
+		return "dettagli";
+		
+	}
+}

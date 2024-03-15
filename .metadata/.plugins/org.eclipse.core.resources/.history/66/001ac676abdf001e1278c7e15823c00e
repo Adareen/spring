@@ -1,0 +1,24 @@
+package com.example.progetto.prensetation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.example.progetto.services.SerieService;
+
+@Controller // stiamo usando un controller e la risposta che ti do è il nome della pagina html che sta dentro template
+public class SerieCTRL2 {
+	
+	// mvc method
+
+	@Autowired
+	private SerieService service;
+	
+	@GetMapping("/serie")
+	@ResponseBody
+	public String getSerie() {
+		return "serie"; // nome della pagina che deve stare dentro html
+	}
+	
+}

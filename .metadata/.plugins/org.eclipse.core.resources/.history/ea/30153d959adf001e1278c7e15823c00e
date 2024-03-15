@@ -1,0 +1,55 @@
+package com.example.progetto.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.progetto.entities.SerieTV;
+import com.example.progetto.repos.SerieTVDAO;
+
+public class SerieServiceImpl implements SerieService{
+
+	@Autowired
+	SerieTVDAO dap;
+
+	// clicca su add unimplemented methods per far comparire tutti i metodi 
+	
+	
+	@Override
+	public List<SerieTV> getSerie() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SerieTV getSerieById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SerieTV getSerieaddSerie(SerieTV s) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SerieTV uddateSerie(SerieTV s) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteSerie(SerieTV s) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteSerie(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}

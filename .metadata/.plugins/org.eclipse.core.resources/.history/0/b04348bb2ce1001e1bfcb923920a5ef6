@@ -1,0 +1,39 @@
+package com.progetto.services;
+
+import java.util.List;
+
+import com.progetto.entities.Prodotto;
+
+public class ProdottoServiceIMPL implements ProdottoService {
+
+	@Override
+	public List<Prodotto> getProdotti() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Prodotto> getProdottiByNome() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Prodotto addProtto() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Prodotto updateProdotto(Prodotto p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteProdotto(Prodotto p) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.prj.services;
+
+import java.util.List;
+
+import com.prj.entities.Serie;
+
+public class SerieServiceImp implements SerieService {
+
+	@Override
+	public List<Serie> getSerie() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addSerie(Serie s) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

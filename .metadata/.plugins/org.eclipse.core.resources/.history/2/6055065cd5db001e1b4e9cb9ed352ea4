@@ -1,0 +1,41 @@
+.label {
+  text-align: center;
+}
+
+.box {
+  /* background-color: rgba(210, 71, 58, 0.9); */
+  /* color: black; */
+  width: auto;
+  height: fit-content;
+  font-size: 75%;
+  padding: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  border-radius: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 3rem;
+
+  background-image: url(./img/sfondo.jpeg);
+  background-size: cover;s
+}
+.footertext {
+  /* width: 300px; */
+  margin-top: 20%;
+  height: 10rem;
+
+  background-color: #1e2127;
+  color: #ffffff;
+  text-align: center;
+}
+body {
+  /* background-image: url(./img/sfondo.jpeg); */
+  /* background-size: cover; */
+
+  background-color: rgba(152, 102, 102, 0.9);
+  color: black;
+}
+
+#btnCerca {
+  margin-top: 1rem;
+}

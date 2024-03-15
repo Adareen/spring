@@ -1,0 +1,16 @@
+package com.progetto.services;
+
+import java.util.List;
+
+import com.progetto.entities.Films;
+
+public interface FilmService {
+	
+	Films addFilm(Films f);
+	
+	List<Films> getFilms();
+	Films getFilmsById(int id);
+	List<Films> getFilmsById(int id);
+	
+
+}

@@ -1,0 +1,10 @@
+package com.example.progetto.integration;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api") // finisci nel controller rest 
+public class SerieCTRL {
+
+}

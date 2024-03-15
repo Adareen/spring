@@ -1,0 +1,22 @@
+package com.example.progetto.prensetation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.progetto.services.SerieService;
+
+@Controller
+public class SerieCTRL {
+	
+	// mvc method
+
+	@Autowired
+	private SerieService service;
+	
+	@GetMapping("/serie")
+	public String getSerie() {
+		return "serie";
+	}
+	
+}
