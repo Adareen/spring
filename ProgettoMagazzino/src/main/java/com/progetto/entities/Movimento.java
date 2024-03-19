@@ -1,10 +1,13 @@
 package com.progetto.entities;
 
 import java.time.LocalDate;
+import java.util.Set;
 
-import org.hibernate.annotations.ForeignKey;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.query.sqm.FetchClauseType;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -17,21 +20,39 @@ import jakarta.persistence.Table;
 @Table(name="movimento_magazzino")
 public class Movimento {
 
-	@Id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_prodotto", referencedColumnName = "id", nullable = false)
+    private Prodotto prodotto;
+
+    private int entrate;
+    private int uscite;
+
+    private LocalDate data;
 	
-	//@JoinColumn(table = "Prodotti_magazzino", referencedColumnName = "id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id; 
-	
-    @ManyToOne
-    @JoinColumn(name = "id_prodotto")
-    private Prodotto prodotto; 
-	private int entrate;
-	private int uscite;
-	
-	private LocalDate data;
 	
 	
+//	@Id
+//	
+//	//@JoinColumn(table = "Prodotti_magazzino", referencedColumnName = "id")
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	private int id; 
+//	
+////	@ManyToOne(fetch = FetchType.LAZY)
+////    @JoinColumn(name = "id_prodotto")
+//	@ManyToOne
+//    private Prodotto prodotto; 
+//    
+//    
+//	private int entrate;
+//	private int uscite;
+//	
+//	private LocalDate data;
+//	
+//	
 	
 	public int getEntrate() {
 		return entrate;

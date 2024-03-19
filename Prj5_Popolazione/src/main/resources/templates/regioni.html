@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <!--
+serve ad inserire timeleaf in pagina
+-->
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+  </head>
+  <body>
+    <h1>Seleziona regione</h1>
+
+    <select id="selettoreRegione" name="regione">
+      <option>scegli regione</option>
+      <!-- th each è un foreach che cicla -->
+      <option th:each="regione: ${regioni}" th:text="${regione}"></option>
+    </select>
+
+
+    <select id="selettoreProvincia" name="provincia">
+      <option>scegli provincia</option>
+      <!-- th each è un foreach che cicla -->
+    </select>
+
+
+    <script type="text/JavaScript">
+       const URL="api/province/";
+      const TENDINA_REGIONE=document.querySelector("#selettoreRegione")
+      const TENDINA_PROVINCIA=document.querySelector("#selettoreProvincia")
+      
+      
+      TENDINA_REGIONE.addEventListener("change", ()=>{
+
+         const REGIONE=TENDINA_REGIONE.value;
+         console.log(REGIONE);
+         
+         fetch(URL+REGIONE)
+         .then(res=> res.json())
+         .then(province=> {
+        	 for(const p of province){
+        		 console.log(p.comune);
+        	 }
+         })
+      })
+
+
+    </script>
+
+  </body>
+</html>
